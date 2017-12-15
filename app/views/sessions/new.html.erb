@@ -1,0 +1,16 @@
+
+<% if @errors %>
+    <% @errors.each do |errors| %>
+      <%= @error %>
+    <%end%>
+<%end%>
+<p> <p>
+  
+<%= form_tag('/login', method:'post') do %>
+  <label for="user[email]"> Email: </label>
+  <input name="email" type="text">
+  <label for="user[email]"> Password: </label>
+  <input name="password" type="password">
+  <center> <input type="submit" class="waves-effect waves-light btn-large red darken-2">
+<% end %>
+<p>
