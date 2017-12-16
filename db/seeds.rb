@@ -8,3 +8,4 @@
 User.delete_all
 
 User.create(username: 'candyquintanilla', email: 'candyxtah2@aol.com', password: 'candyq')
+Location.create(title: "LA Marathon 2014", description: "Very rewarding", location:"1321 W 24th st, Los Angeles, CA", user_id: 1)
