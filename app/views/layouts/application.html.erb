@@ -3,11 +3,29 @@
   <head>
     <title>RunCandyRun</title>
     <%= csrf_meta_tags %>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+    <% if @user != nil %>
+    <nav>
+        <div class="nav-wrapper blue accent-1">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href= '/locations'> LOCATIONS </a> </li>
+              <li><a href= '/locations/new'> ADD NEW LOCATION</a> </li>
+              <li><a href = '/logout'> LOGOUT </a></li>
+            <%end%>
+          </ul>
+        </div>
+      </nav>
   <body>
     <%= yield %>
   </body>

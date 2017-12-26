@@ -19,11 +19,7 @@
       </div>
 
       <div class="col-3">
-        <% @user_comments.each do |comment| %>
-        <% if comment.user_id == @user.id %>
-          -  <%= comment.body %> <p>
-        <% end %>
-        <% end %>
+
       </div>
 
     </div>
@@ -299,10 +295,10 @@
 
       $.ajax({
         type: 'GET',
-        url: '/bookmarks'
-      }).done(function(user_bookmarks){
-           user_bookmarks.map(function(location){
-             var latLng = new google.maps.LatLng(location.location.latitude,location.location.longitude);
+        url: '/markers'
+      }).done(function(data){
+           data.map(function(location){
+             var latLng = new google.maps.LatLng(location.latitude,location.longitude);
              var marker = new google.maps.Marker({
                icon: {
                  path: google.maps.SymbolPath.CIRCLE,
@@ -320,12 +316,16 @@
                              <div id="siteNotice">
                              </div>
                              <h2 id="firstHeading" class="firstHeading">
-                             ${location.location.title}
+                             ${location.title}
                              </h2>
                              <div id="bodyContent">
-                             ${location.location.description} <h6>
-                             ${location.location.location} </h6>
+                             ${location.description}
+                             <h6>
+                             ${location.address} </h6>
                              <p>
+                             ${location.distance} <br>
+                             ${location.time} <br>
+                             ${location.date}
 
                              </div>
                              </div>
@@ -345,7 +345,7 @@
    }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAua3ercXpSFJFkdRNaWOsHIL-FeXNl9Oo&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-9sD3Kkc46hXQLXcbM1sWuXoA0Ms6wfk&callback=initMap">
     </script>
   </body>
 </html>

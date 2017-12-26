@@ -17,26 +17,21 @@ ActiveRecord::Schema.define(version: 20171215194551) do
 
   create_table "locations", force: :cascade do |t|
     t.string "title"
+    t.date "date"
     t.text "description"
-    t.string "location"
-    t.float "longitude"
+    t.string "distance"
+    t.string "time"
+    t.string "address", null: false
     t.float "latitude"
+    t.float "longitude"
     t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_locations_on_user_id"
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.string "title"
-    t.bigint "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
-    t.index ["location_id"], name: "index_photos_on_location_id"
+    t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,5 +43,4 @@ ActiveRecord::Schema.define(version: 20171215194551) do
   end
 
   add_foreign_key "locations", "users"
-  add_foreign_key "photos", "locations"
 end

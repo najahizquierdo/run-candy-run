@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color:#CDCDCD;
+  padding-top: 2%;
+}
+
+@font-face {
+  font-family: "action-is.regular";
+  src: url('/assets/fonts/action-is.regular.ttf') format('');
+}
+
+.col-1 {
+  float: left;
+  width: 40%;
+  top: 5%;
+  background-color: #F78888;
+}
+
+
+.col-2{
+background-color: #90CCF4;
+float:right;
+height: 880px;
+width:60%;
+
+}
+
+
+.col-3{
+  background-color: #24305E;
+}

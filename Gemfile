@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.4'
 gem 'geocoder'
 gem 'bcrypt'
 gem 'paperclip', '~> 4.2'
+gem 'jquery'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
