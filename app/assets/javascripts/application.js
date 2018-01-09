@@ -13,11 +13,3 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-<script type="text/javascript">
-$(document).ready(function(){
-    $("#nav-mobile").scrollspy({
-        target: "#myNavbar",
-        offset: 70
-    })
-});
-</script>
