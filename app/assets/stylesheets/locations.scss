@@ -9,23 +9,25 @@
 
 .about {
   float: right;
-  width: 400px;
+  width: 20%;
 }
 .col-about{
 float:right;
-width:65%;
+width:50%;
+margin-right: 3%;
+margin-top: -10%;
 background-color: #374785;
 
 
 }
 
 .container {
-    width: 450px;
-    height: 450px;
+    width: 40%;
+    height: 40%;
     margin: 1em auto;
     overflow: hidden;
     background: #F78888;
-    left:365px;
+    left:20%;
     position: absolute;
     box-sizing: border-box;
 }

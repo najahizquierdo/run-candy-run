@@ -14,7 +14,7 @@
  *= require_self
  */
 body {
-  background-color:#CDCDCD;
+  background-color:#24305E;
   padding-top: 2%;
 }
 
@@ -30,11 +30,18 @@ body {
   background-color: #F78888;
 }
 
+img {
+  width: 45%;
+}
+
+.social {
+  width:25%;
+}
 
 .col-2{
 background-color: #90CCF4;
 float:right;
-height: 880px;
+height: 75%;
 width:60%;
 
 }
